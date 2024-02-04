@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/47730f9393.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Yummy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center"
+    >
+      <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+    <nav>
+      <div class="navDrop">
+        <div class="cont">
+          <img src="img/logo.png" class="w-75" alt="" />
+          <div
+            id="bottomOpen"
+            class="cursorPointer"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling"
+          >
+            <i class="fa-solid fa-bars fa-2x"></i>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-globe py-1"></i>
+            <i class="fa-solid fa-share-nodes mb-2"></i>
+          </div>
+        </div>
+      </div>
+      <div
+        class="offcanvas offcanvas-start bg-dark"
+        data-bs-scroll="true"
+        data-bs-backdrop="false"
+        tabindex="-1"
+        id="offcanvasScrolling"
+        aria-labelledby="offcanvasScrollingLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
+          <button
+            id="btnClose"
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body na">
+          <div class="nan">
+            <a class="position-relative" href="search.html">Search</a>
+            <a
+              class="position-relative"
+              href="categories.html"
+              id="categoriesBtn"
+              >Categories</a
+            >
+            <a class="position-relative" href="area.html">Area</a>
+            <a class="position-relative" href="Ingredients.html">Ingredients</a>
+            <a class="position-relative" href="contact.html">contact</a>
+          </div>
+          <div class="text-white">
+            <i class="fa-brands cursorPointer fa-facebook"></i>
+            <i class="fa-brands cursorPointer fa-twitter"></i>
+            <i class="fa-solid cursorPointer fa-globe"></i>
+            <h5>Copyright Â© 2019 All Rights Reserved.</h5>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="areaMeals">
+      <div
+        class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+      >
+        <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+      </div>
+      <div class="container my-5">
+        <div class="row my-5" id="areaRow"></div>
+      </div>
+    </section>
+    <div id="closeItem" class="d-none">
+      <div class="d-flex container justify-content-between mt-3">
+        <h1 class="text-white">Filter Meal</h1>
+        <div id="filterBtn" class="exite cursorPointer" onclick="closeArea()">
+          <i class="fa-solid fa-xmark fa-2x"></i>
+        </div>
+      </div>
+    </div>
+    <section id="mealOfArea">
+      <div
+        class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+      >
+        <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+      </div>
+      <div class="container my-5">
+        <div class="row my-5" id="mealOfAreaRow"></div>
+      </div>
+    </section>
+    <section id="detOfMeal">
+      <div
+        class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center"
+      >
+        <i class="fa fa-spinner fa-spin fa-5x text-white"></i>
+      </div>
+
+      <div class="container">
+        <div class="row" id="detailsOfMeal"></div>
+      </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+    <script src="js/area.js"></script>
+  </body>
+</html>

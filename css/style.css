@@ -1,0 +1,257 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+/****************************************************************/
+/* Customize the scrollbar for WebKit browsers */
+body::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: yellowgreen; /* Color of the scrollbar thumb */
+  border-radius: 0px; /* Round the corners of the thumb */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(28, 5, 5); /* Change thumb color on hover */
+}
+
+/*******************/
+.na {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+.na a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  /* margin-top: 25px; */
+}
+.btn-close {
+  background-image: url("../img/icon.png");
+}
+.navDrop {
+  width: 80px;
+  height: 100%;
+  background-color: #eee;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.navDrop .cont {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 5px solid red; */
+}
+.nan a {
+  top: 300px;
+}
+@media screen and (max-width: 700px) {
+  .navDrop {
+    width: 40px;
+  }
+  #searchMeal {
+    width: 80%;
+    margin-left: 50px;
+  }
+  #detOfMeal {
+    width: 80%;
+    margin-left: 50px;
+  }
+  #categoriesId {
+    width: 80%;
+    margin-left: 50px;
+  }
+  #categoriesFilter {
+    width: 80%;
+    margin-left: 50px;
+  }
+  #mealOfArea {
+    width: 80%;
+    margin-left: 50px;
+  }
+  #closeItem {
+    width: 80%;
+    margin-left: 50px;
+  }
+  #Ingredients {
+    width: 80%;
+    margin-left: 50px;
+  }
+  #IngredientsMeals {
+    width: 80%;
+    margin-left: 50px;
+  }
+  #deatailsIngredientsMeals {
+    width: 80%;
+    margin-left: 50px;
+  }
+  #closemEals {
+    width: 80%;
+    margin-left: 50px;
+  }
+  /* .content {
+      margin-left: 0;
+  } */
+}
+/* .navDrop .cont img {
+  border: 5px solid blue;
+}
+
+.navDrop .cont .ic {
+  border: 5px solid blue;
+}
+.navDrop .cont .icon {
+  border: 5px solid blue;
+} */
+.icon i {
+  display: block;
+  cursor: pointer;
+}
+.cursorPointer {
+  cursor: pointer;
+}
+/**************search page*************************/
+.formControl {
+  margin: 15px;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  display: inline;
+  border-radius: 10px;
+}
+.formControl:focus {
+  color: rgb(40, 35, 35);
+  /* background-color: #eee; */
+  border-color: rgb(61, 55, 55);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+/*****************************************/
+.item-container {
+  position: relative;
+  overflow: hidden;
+}
+.item-container .layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  background-color: rgba(203, 188, 188, 0.587);
+  transition: all 0.5s;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-container:hover .layer {
+  top: 0;
+}
+/*****************/
+/* #searchMeal {
+  display: none;
+} */
+/*************************/
+.exite {
+  color: #eeeeee72;
+  transition: all 0.5s;
+}
+.exite:hover {
+  color: #eee;
+}
+/**********************/
+/* #loadingShow {
+  display: none;
+  z-index: 999;
+}
+.margTop {
+  margin-top: 35vh;
+}
+#loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+.loading-screen {
+  z-index: 999;
+  display: flex;
+}
+
+.inner-loading-screen {
+  position: absolute;
+  z-index: 9;
+  background-color: #0d0d0d;
+  display: flex;
+}
+.inner-loading-scree {
+  position: absolute;
+  z-index: 9;
+  background-color: #0d0d0d;
+  display: flex;
+}
+/*********/
+.alert {
+  width: fit-content;
+}
+/*****************CATEGORIES PAGE**************/
+.itemCategories {
+  position: relative;
+  overflow: hidden;
+}
+.itemCategories .layerCategories {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  background-color: rgba(203, 188, 188, 0.587);
+  transition: all 0.5s;
+  text-align: center;
+  color: rgb(42, 37, 37);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.itemCategories:hover .layerCategories {
+  top: 0;
+}
